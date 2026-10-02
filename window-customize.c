@@ -1741,7 +1741,7 @@ window_customize_set_option_callback(struct client *c, void *itemdata,
 
 fail:
 	*cause = toupper((u_char)*cause);
-	status_message_set(c, -1, 1, 0, 0, "%s", cause);
+	status_message_set(c, -1, 1, 0, 0, 0, "%s", cause);
 	free(cause);
 	return (PROMPT_CLOSE);
 }
@@ -2417,7 +2417,7 @@ window_customize_set_command_callback(struct client *c, void *itemdata,
 
 fail:
 	*error = toupper((u_char)*error);
-	status_message_set(c, -1, 1, 0, 0, "%s", error);
+	status_message_set(c, -1, 1, 0, 0, 0, "%s", error);
 	free(error);
 	return (PROMPT_CLOSE);
 }
